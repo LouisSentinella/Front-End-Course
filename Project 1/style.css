@@ -164,3 +164,7 @@ p {
     padding: 50px;
     border: 1px solid white;
 }
+
+.tbox :last-child {
+    font-size: 0.8rem;
+}
