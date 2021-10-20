@@ -1,9 +1,13 @@
 html {
     /*height: 100%;*/
+    background-image: linear-gradient(#FC5E55 , #FA4083);
+
 }
 
 body {
-    background-image: linear-gradient(#FC5E55 , #FA4083);
+    background-image: url("images/image-lion-background.png");
+    background-position: top center;
+    background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 1.125rem;
@@ -28,11 +32,22 @@ header {
     padding-bottom: 20px;
 }
 
+.logo :hover {
+    cursor: default;
+}
+
 main {
     min-height: 300px;
     display: flex;
     align-items: center;
 }
+
+.main-contact {
+    min-height: 250px;
+    padding-top: 50px;
+}
+
+
 
 .herobox1 {
     flex: 2;
@@ -138,15 +153,18 @@ p {
 
 .navbutton {
     border: 1px solid white;
-    text-decoration: none;
     padding: 11px 25px;
-    color: white;
     font-family: "Playfair Display", sans-serif;
     margin-left: 20px;
     display: inline-block;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
 
+a {
+    color: white;
+    text-decoration: none;
 }
 
 .testimonials {
@@ -167,4 +185,65 @@ p {
 
 .tbox :last-child {
     font-size: 0.8rem;
+}
+
+/*This turns the dropdown menu off when not used*/
+.dropdown-box {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    margin-top: 11px;
+
+}
+/*This class turns on the dropdown menu during hovers*/
+.navbutton:hover .dropdown-box {
+    display: block;
+}
+
+.dropdown-box .navbutton {
+    background-color: #FC5E55;
+    border-radius: 0px;
+    width: 99px;
+    margin-left: -26px;
+}
+
+
+.dropdown-box .navbutton:hover {
+    background-color: #d7433b;
+    transition-duration: 500ms;
+}
+
+.input-wrapper {
+    margin-bottom: 20px;
+}
+
+input[type=text], input[type=email], textarea {
+    padding: 12px 20px;
+    width: 60%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+}
+
+.newline {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.margin-right-a {
+    margin-right: 20px;
+}
+
+.subbutton {
+    text-decoration: none;
+    background-color: white;
+    padding: 11px 25px;
+    color: black;
+    font-family: "Playfair Display", sans-serif;
+    margin-top: 10px;
+}
+
+form {
+    margin: 40px 0px;
 }
