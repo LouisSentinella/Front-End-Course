@@ -14,7 +14,11 @@ $county = $_POST['county'];
 
 
 $content="From: $name\r\n Message: $messagecontent\r\n Sub to email: $emailsub\r\n Contact pref: $contactpref\r\n County: $county\r\n ";
-$recipient = "louissentinella@gmail.com";
+$recipient = getenv('CONTACT_EMAIL');
+if (!$recipient) {
+    http_response_code(500);
+    exit('Contact form is not configured.');
+}
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 echo "Email sent!";
